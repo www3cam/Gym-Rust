@@ -1,1 +1,1 @@
-from gym_rust.envs.Rust_Env import RustEnv
+from gym_rust.envs.rust_env import RustEnv
