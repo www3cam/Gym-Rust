@@ -18,7 +18,7 @@ class RustEnv(gym.Env):
     # Example when using discrete actions:
     self.action_space = spaces.Discrete(2)
     # Example for using image as input:
-    self.observation_space = spaces.Box(low=0, high=10000000., shape=1
+    self.observation_space = spaces.Box(low=0., high=10000000., shape=(1,)
                     , dtype=np.float32)
 
   def step(self, action):
