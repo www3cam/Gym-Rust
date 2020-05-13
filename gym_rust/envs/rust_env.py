@@ -43,7 +43,7 @@ class RustEnv(gym.Env):
     integer = np.random.randint(len(resetvals))
     
     self.miles = resetvals[integer]*1000000
-    self.date = resentdate[integer]
+    self.date =  resetdate[integer]
     return self.miles
     ...
   def render(self, mode='human', close=False):
