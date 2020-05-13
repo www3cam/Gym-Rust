@@ -34,7 +34,7 @@ class RustEnv(gym.Env):
     else:
         done1 = False
     
-    return self.miles, 1., done1, {}
+    return [self.miles], 1., done1, {}
       
   def reset(self):
     # resetvals is the empirical distribution of the buses starting milage
@@ -44,7 +44,7 @@ class RustEnv(gym.Env):
     
     self.miles = resetvals[integer]*1000000
     self.date =  resetdate[integer]
-    return self.miles
+    return [self.miles]
     ...
   def render(self, mode='human', close=False):
     return False
