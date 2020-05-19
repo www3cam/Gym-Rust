@@ -16,7 +16,7 @@ class RustEnv(gym.Env):
     # Define action and observation space
     # They must be gym.spaces objects
     # Example when using discrete actions:
-    self.action_space = spaces.Discrete(2, shape=(1,))
+    self.action_space = spaces.MultiDiscrete([(0,1)])
     # Example for using image as input:
     self.observation_space = spaces.Box(low=0., high=10000000., shape=(1,)
                     , dtype=np.float32)
