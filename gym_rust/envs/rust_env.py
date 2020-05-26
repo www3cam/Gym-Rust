@@ -22,6 +22,10 @@ class RustEnv(gym.Env):
                     , dtype=np.float32)
 
   def step(self, action):
+    if self.date > 116:
+        done1 = True
+    else:
+        done1 = False
     if action == 0:
       self.miles = self.miles + max(0.,-1.98803789e-03*self.miles + 1.76937179e+03 + 1445.332*np.random.normal())
     elif action == 1:
@@ -30,10 +34,7 @@ class RustEnv(gym.Env):
     else:
       print('error')
     self.date = self.date + 1
-    if self.date > 116:
-        done1 = True
-    else:
-        done1 = False
+
     
     return [self.miles], 1., done1, {}
       
