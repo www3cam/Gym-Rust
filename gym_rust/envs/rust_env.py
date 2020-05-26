@@ -29,8 +29,8 @@ class RustEnv(gym.Env):
     if action == 0:
       self.miles = self.miles + max(0.,-1.98803789e-03*self.miles + 1.76937179e+03 + 1445.332*np.random.normal())
     elif action == 1:
-      #self.miles = 0. + max(0.,-1.98803789e-03*self.miles + 1.76937179e+03 + 1445.332*np.random.normal())/2.
-      done1 = True
+      self.miles = 0. + max(0.,-1.98803789e-03*self.miles + 1.76937179e+03 + 1445.332*np.random.normal())/2.
+      #done1 = True
     else:
       print('error')
     self.date = self.date + 1
